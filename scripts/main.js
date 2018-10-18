@@ -20,7 +20,3 @@ hideButton.onclick = function() {
 		mainPicture.style.display = "none";
 	}
 }
-
-let hideButton.onclick = function() {
-  mainPicture.style.display = "none";
-}
