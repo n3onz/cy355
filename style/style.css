@@ -1,0 +1,104 @@
+body{
+  font-family: Tahoma, Geneva, sans-serif;
+  background: black;
+}
+
+h1 {
+  max-width: 150px;
+  float: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+h3{
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+header{
+  background: linear-gradient(to right, #CBBB8C, black);
+}
+
+footer{
+  color: #CBBB8C;
+}
+
+input{
+  margin-left: 10%;
+  width: 80%;
+  background: black;
+  color: white;
+}
+
+.academics h3{
+  background: #7FB0CE;
+}
+.academics {
+  background: #E4F2FB;
+
+}
+
+.military {
+  background: #B8E5AC;
+}
+
+.military h3{
+  background: #8ABE7C;
+}
+
+.physical {
+  background: url('apfb.png') center right no-repeat, #E1AAA7;
+  background-size: 30%, auto;
+}
+
+.physical h3 {
+  background: #DD9086;
+}
+
+.personal {
+    background: url('friends.jpg') bottom center no-repeat;
+    background-size: 100%;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.personal h3 {
+  background: #C185D0;
+  color: black;
+  text-shadow: 0px 0px;
+
+}
+
+.list{
+  float: left;
+  width: 48%;
+  height: 250px;
+  border-radius: 10px;
+  margin:0.5%;
+}
+
+.week {
+  text-align: right;
+  margin-left: 35%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #CBBB8C;
+}
+
+.content{
+
+}
+
+.important{
+  font-weight: bold;
+  color:red;
+}
+
+@media (max-width:550px) {
+  .list {
+    width: 98%;
+  }
+}

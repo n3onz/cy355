@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style\style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weekly Planner</title>
+  <script src="scripts/w3.js"></script>
+  <script src="scripts/academic_tasks.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>To Do List</h1>
+    <div class="week">
+      <h4 class="week">Week of</h4>
+      <time id="date" datetime="">
+      <script>
+        function getMonday(date) {
+          var day = date.getDay() || 7;
+          if (day !== 1) date.setHours(-24 * (day - 1));
+          return date;
+        }
+
+        var monday = getMonday(new Date());
+        document.write(monday.toDateString());
+        document.getElementById("date").datetime = monday;
+      </script>
+    </time>
+  </div>
+  </header>
+  <main class="content">
+    <section class="academics list">
+      <h3>Academics</h3>
+      <ul id="academicTasks">
+        <li w3-repeat="academicTaskItems" class={{Category}}>{{AcademicTask}}</li>
+      </ul>
+	  <button onclick="w3.sortHTML('#academicTasks','li')">Sort Tasks</button>
+      <form class="new-academic-task">
+        <input type="text" name="text" placeholder="New academic task">
+      </form>
+    </section>
+    <section class="military list" w3-include-html="military-list.html">
+    </section>
+    <section class="physical list">
+      <h3>Physical</h3>
+      <ul>
+        <li>Practice APFT</li>
+        <li>Workout Plan:
+          <ul>
+            <li>M/F = Legs</li>
+            <li>T/Th = Chest/Arms</li>
+            <li>W/Sun = Run</li>
+          </ul>
+        </li>
+      </ul>
+      <form class="new-physical-task">
+        <input type="text" name="text" placeholder="New physical task">
+      </form>
+    </section>
+    <section class="personal list">
+      <h3>Personal</h3>
+      <ul>
+        <li>Veterans Day Weekend Plans</li>
+        <li>Thanksgiving Travel</li>
+        <li class="important">Dad's Birthday</li>
+      </ul>
+      <form class="new-personal-task">
+        <input type="text" name="text" placeholder="New personal task">
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>Maintained by CDT Heldstab</p>
+  </footer>
+</body>
+<script>
+w3.includeHTML();
+w3.displayObject("academicTasks", academicTaskList);
+</script>
+</html>
